@@ -35,7 +35,14 @@ class SearchVC: UIViewController {
     }
     
     @objc func pushFollowersListVC() {
-        guard isUsernameEntered else { return }
+        guard isUsernameEntered else {
+            presentGFAlertOnMainThread(
+                title: "Empty username",
+                message: "Please enter a username to search for followers",
+                buttonTitle: "Ok"
+            )
+            return
+        }
         
         let followersListVC = FollowersListVC()
         followersListVC.userName = usernameTextField.text
