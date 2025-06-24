@@ -29,14 +29,14 @@ class FollowerCell: UICollectionViewCell {
         let cellPadding = CGFloat(8)
         
         NSLayoutConstraint.activate([
-            avatarImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: cellPadding),
-            avatarImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: cellPadding),
-            avatarImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -cellPadding),
-            avatarImage.heightAnchor.constraint(equalTo: contentView.widthAnchor),
+            avatarImage.topAnchor.constraint(equalTo: topAnchor, constant: cellPadding),
+            avatarImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: cellPadding),
+            avatarImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -cellPadding),
+            avatarImage.heightAnchor.constraint(equalTo: avatarImage.widthAnchor),
             
             usernameLabel.topAnchor.constraint(equalTo: avatarImage.bottomAnchor, constant: 12),
-            usernameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: cellPadding),
-            usernameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -cellPadding),
+            usernameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: cellPadding),
+            usernameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -cellPadding),
             usernameLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
